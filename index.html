@@ -1,107 +1,76 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gas Monkey Garage - Clone</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <title>Gas Monkey Garage – Home</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="navbar-container">
-            <a href="index.html" class="logo">
-                GAS MONKEY <span class="logo-garage">GARAGE</span>
-            </a>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <a href="#"><img src="logo.png" alt="Gas Monkey Garage"></a>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Apparel</a></li>
+          <li><a href="#">Accessories</a></li>
+          <li><a href="#">Car Care</a></li>
+          <li><a href="#">Tour</a></li>
+          <li><a href="#">ZR1 Giveaway</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a href="#" class="login">Log in</a>
+        <a href="#" class="cart">Cart (0)</a>
+      </div>
+    </div>
+  </header>
 
-            <nav class="nav-menu">
-                <ul class="nav-links">
-                    <li><a href="#">TV</a></li>
-                    <li><a href="#">EVENTS</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">CONTACT</a></li>
-                    <li><a href="#" class="nav-button">SHOP</a></li>
-                </ul>
-            </nav>
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>OUR BADDEST GIVEAWAY</h1>
+      <p>Get you some of that!</p>
+      <a href="#" class="btn btn-primary">Enter Now</a>
+    </div>
+  </section>
 
-            <div class="hamburger">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-    </header>
+  <section class="featured-products">
+    <h2>New Arrivals</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="tee1.jpg" alt="GMG CUL8R Monkey Tee">
+        <h3>GMG CUL8R Monkey Tee</h3>
+        <p>From $39</p>
+        <a href="#" class="btn">Select an option</a>
+      </div>
+      <div class="product">
+        <img src="hoodie1.jpg" alt="GMG King of Chaos Tee">
+        <h3>GMG King of Chaos Tee</h3>
+        <p>From $39</p>
+        <a href="#" class="btn">Select an option</a>
+      </div>
+      <div class="product">
+        <img src="carcare1.jpg" alt="GMG Car Cleaner Bundle">
+        <h3>GMG Car Cleaner Bundle</h3>
+        <p>From $110</p>
+        <a href="#" class="btn">Add to cart</a>
+      </div>
+    </div>
+  </section>
 
-    <main>
-        
-        <section class="hero">
-            <div class="hero-content">
-                <h1>LOUD & PROUD</h1>
-                <p>Welcome to the world of Gas Monkey</p>
-                <a href="#" class="cta-button">SEE WHAT'S NEW</a>
-            </div>
-        </section>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© 2025 Gas Monkey Garage. All rights reserved.</p>
+      <ul class="footer-nav">
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+      </ul>
+    </div>
+  </footer>
 
-        <section class="featured-links">
-            <div class="container">
-                <h2>EXPLORE THE GARAGE</h2>
-                <div class="links-grid">
-                    
-                    <a href="#" class="link-card">
-                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1517524008697-84bbe3c38fdf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDEwfHx0dnxlbnwwfHx8fDE2NzEyNDIwMTE&ixlib=rb-4.0.3&q=80&w=1080');"></div>
-                        <div class="card-content">
-                            <h3>GMG ON TV</h3>
-                            <p>Catch up on all the Fast N' Loud action.</p>
-                        </div>
-                    </a>
-                    
-                    <a href="#" class="link-card">
-                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1511578314322-379afb476865?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDV8fGV2ZW50fGVufDB8fHx8MTY3MTI0MjA0MQ&ixlib=rb-4.0.3&q=80&w=1080');"></div>
-                        <div class="card-content">
-                            <h3>UPCOMING EVENTS</h3>
-                            <p>See where the Monkeys are heading next.</p>
-                        </div>
-                    </a>
-
-                    <a href="#" class="link-card">
-                        <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1541899128-06283f345831?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDJ8fGNhcuMjYXJhZ2V8ZW58MHx8fHwxNjcxMjQyMDcw&ixlib=rb-4.0.3&q=80&w=1080');"></div>
-                        <div class="card-content">
-                            <h3>ABOUT US</h3>
-                            <p>Learn more about Richard Rawlings & the team.</p>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>JOIN THE MONKEY TRAP</h4>
-                    <p>Get updates on new builds, events, and merch.</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Enter your email">
-                        <button type="submit">SUBSCRIBE</button>
-                    </form>
-                </div>
-
-                <div class="footer-section social-links">
-                    <h4>FOLLOW US</h4>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Gas Monkey Garage (Clone by [Seu Nome]). All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>

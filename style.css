@@ -1,341 +1,163 @@
-/* ======== RESET BÁSICO & FONTES ======== */
+/* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #0a0a0a;
-    color: #ffffff;
-    line-height: 1.6;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: #333;
 }
 
 a {
-    text-decoration: none;
-    color: #fff;
+  text-decoration: none;
+  color: inherit;
 }
 
-ul {
-    list-style: none;
+.site-header {
+  background: #000;
+  color: #fff;
+  padding: 20px 0;
 }
 
-/* ======== NAVBAR ======== */
-.navbar {
-    background-color: #000;
-    border-bottom: 2px solid #e60000; /* Vermelho GMG */
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
+.header-inner {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-space-between: space-between;
 }
 
-.navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 2rem;
+.logo img {
+  height: 50px;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #fff;
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
 
-.logo-garage {
-    color: #e60000;
+.main-nav ul li a {
+  color: #fff;
+  font-weight: bold;
 }
 
-.nav-menu {
-    display: flex;
-    align-items: center;
+.header-actions a {
+  margin-left: 15px;
+  color: #fff;
 }
 
-.nav-links {
-    display: flex;
-}
-
-.nav-links li {
-    margin-left: 1.5rem;
-}
-
-.nav-links a {
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 0.9rem;
-    padding: 0.5rem;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #e60000;
-}
-
-.nav-button {
-    background-color: #e60000;
-    padding: 0.5rem 1rem !important;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.nav-button:hover {
-    background-color: #ff4d4d;
-    color: #fff !important;
-}
-
-.hamburger {
-    display: none; /* Escondido em telas grandes */
-    font-size: 1.8rem;
-    cursor: pointer;
-    color: #fff;
-}
-
-
-/* ======== SEÇÃO HERO ======== */
 .hero {
-    height: 70vh;
-    /* Imagem de placeholder de um carro clássico */
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDR8fGNsYXNzaWMlMjBjYXJ8ZW58MHx8fHwxNjcxMjQyMjYx&ixlib=rb-4.0.3&q=80&w=1920') no-repeat center center/cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 2rem;
+  background: url('hero-image.jpg') center/cover no-repeat;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-center: center;
+  color: #fff;
+  text-align: center;
 }
 
-.hero-content h1 {
-    font-size: 3.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #fff;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+.hero-inner h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
 }
 
-.hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+.hero-inner p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
 }
 
-.cta-button {
-    background-color: #e60000;
-    color: #fff;
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #e50914;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
 }
 
-.cta-button:hover {
-    background-color: #ff4d4d;
+.btn-primary {
+  background: #ff4c00;
 }
 
-/* ======== SEÇÃO FEATURED LINKS ======== */
-.featured-links {
-    padding: 4rem 0;
-    background-color: #111;
-    text-align: center;
+.featured-products {
+  width: 90%;
+  max-width: 1200px;
+  margin: 50px auto;
 }
 
-.featured-links h2 {
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    margin-bottom: 3rem;
-    color: #fff;
+.featured-products h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
 }
 
-.links-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
 }
 
-.link-card {
-    background-color: #222;
-    border: 1px solid #333;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
+.product {
+  border: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
 }
 
-.link-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+.product img {
+  max-width: 100%;
+  height: auto;
 }
 
-.card-image {
-    height: 250px;
-    background-size: cover;
-    background-position: center;
+.product h3 {
+  margin: 15px 0 10px;
+  font-size: 1.1rem;
 }
 
-.card-content {
-    padding: 1.5rem;
-    flex-grow: 1;
+.product p {
+  margin-bottom: 15px;
+  color: #666;
 }
 
-.card-content h3 {
-    color: #e60000;
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+.site-footer {
+  background: #111;
+  color: #ccc;
+  padding: 30px 0;
 }
 
-.card-content p {
-    font-size: 1rem;
-    color: #ccc;
+.footer-inner {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-space-between: space-between;
 }
 
-/* ======== RODAPÉ ======== */
-footer {
-    background-color: #000;
-    padding: 3rem 0;
-    border-top: 1px solid #333;
-    color: #aaa;
+.footer-nav {
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin-bottom: 2rem;
+.footer-nav li a {
+  color: #ccc;
 }
 
-.footer-section h4 {
-    font-size: 1.2rem;
-    color: #fff;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-}
-
-.newsletter-form {
-    display: flex;
-    margin-top: 1rem;
-}
-
-.newsletter-form input {
-    flex-grow: 1;
-    padding: 0.75rem;
-    border: 1px solid #555;
-    background-color: #222;
-    color: #fff;
-    border-radius: 5px 0 0 5px;
-}
-
-.newsletter-form button {
-    padding: 0.75rem 1rem;
-    background-color: #e60000;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    border-radius: 0 5px 5px 0;
-    transition: background-color 0.3s ease;
-}
-
-.newsletter-form button:hover {
-    background-color: #ff4d4d;
-}
-
-.social-links a {
-    font-size: 1.5rem;
-    margin-right: 1rem;
-    color: #aaa;
-    transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-    color: #e60000;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 2rem;
-    border-top: 1px solid #333;
-    font-size: 0.9rem;
-}
-
-
-/* ======== RESPONSIVIDADE (MOBILE) ======== */
-@media (max-width: 992px) {
-    .links-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-
+/* Ajuste simples para mobile */
 @media (max-width: 768px) {
-    .navbar-container {
-        padding: 0 1.5rem;
-    }
-
-    .nav-menu {
-        position: fixed;
-        top: 65px; /* Altura da navbar */
-        left: -100%; /* Começa fora da tela */
-        background-color: #000;
-        width: 100%;
-        height: calc(100vh - 65px);
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        transition: left 0.3s ease-in-out;
-    }
-
-    .nav-menu.active {
-        left: 0; /* Entra na tela */
-    }
-
-    .nav-links {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .nav-links li {
-        margin: 1.5rem 0;
-    }
-
-    .nav-links a {
-        font-size: 1.5rem;
-    }
-
-    .hamburger {
-        display: block; /* Mostra o hambúrguer */
-    }
-
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .links-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .newsletter-form {
-        justify-content: center;
-    }
-    
-    .social-links {
-        margin-top: 2rem;
-    }
+  .header-inner, .footer-inner {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .main-nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
 }
