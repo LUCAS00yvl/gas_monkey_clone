@@ -28,7 +28,7 @@ a {
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-space-between: space-between;
+  justify-content: space-between;
 }
 
 .logo img {
@@ -51,25 +51,127 @@ a {
   color: #fff;
 }
 
+
+/* ESTILOS DO HERO/SLIDESHOW DO PROJETO 'INVERSA'
+  (O .hero antigo do Gas Monkey foi removido)
+*/
 .hero {
-  background: url('hero-image.jpg') center/cover no-repeat;
-  height: 400px;
-  display: flex;
-  align-items: center;
-  justify-center: center;
-  color: #fff;
+  position: relative; /* Necessário para posicionar o texto e os dots */
+  padding: 0; 
   text-align: center;
+  overflow: hidden;
+  background-color: #000; /* Fundo enquanto carrega */
 }
 
-.hero-inner h1 {
+/* Texto sobreposto ao slide */
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  width: 90%; 
+}
+
+/* O texto do 'hero' original do Gas Monkey */
+.hero-text h1 {
   font-size: 3rem;
   margin-bottom: 10px;
 }
 
-.hero-inner p {
+.hero-text p {
   font-size: 1.2rem;
   margin-bottom: 20px;
 }
+/* Fim do texto do hero */
+
+
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  padding: 0; 
+}
+
+.mySlides {
+  display: none; /* Escondido por padrão */
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 20px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.6s ease;
+  user-select: none;
+  background-color: rgba(0,0,0,0.4);
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+.prev {
+  left: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Container para os dots */
+.dots-container {
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  z-index: 2;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Cor do dot ativo (laranja) */
+.active, .dot:hover {
+  background-color: #ff4c00; 
+}
+
+.fade {
+  animation: fade 1.5s ease-in-out;
+}
+
+@keyframes fade {
+  from {opacity: 0.4}
+  to {opacity: 1}
+}
+
+/* Imagem de fundo do slide */
+.slide-img {
+  width: 100%;
+  height: 450px; /* Altura do hero */
+  object-fit: cover; /* Faz a imagem cobrir o espaço */
+  filter: blur(2px) brightness(0.7); /* Efeito do Inversa */
+  display: block;
+}
+/* FIM DOS ESTILOS DO SLIDESHOW */
+
 
 .btn {
   display: inline-block;
@@ -81,6 +183,7 @@ a {
   cursor: pointer;
 }
 
+/* Botão primário (laranja) do Gas Monkey */
 .btn-primary {
   background: #ff4c00;
 }
@@ -135,7 +238,7 @@ a {
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-space-between: space-between;
+  justify-content: space-between: space-between;
 }
 
 .footer-nav {

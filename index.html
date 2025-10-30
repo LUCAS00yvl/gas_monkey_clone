@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Gas Monkey Garage – Home</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style-misturado.css">
 </head>
 <body>
 
@@ -30,13 +30,45 @@
   </header>
 
   <section class="hero">
-    <div class="hero-inner">
-      <h1>OUR BADDEST GIVEAWAY</h1>
-      <p>Get you some of that!</p>
-      <a href="#" class="btn btn-primary">Enter Now</a>
+    <div class="slideshow-container">
+      
+      <div class="mySlides fade">
+        <img src="https://placehold.co/1200x450/222/FFF?text=Slide+1" class="slide-img">
+        <div class="hero-text">
+          <h1>OUR BADDEST GIVEAWAY</h1>
+          <p>Get you some of that!</p>
+          <a href="#" class="btn btn-primary">Enter Now</a>
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <img src="https://placehold.co/1200x450/333/FFF?text=Slide+2" class="slide-img">
+        <div class="hero-text">
+          <h1>NEW APPAREL</h1>
+          <p>Fresh looks.</p>
+          <a href="#" class="btn btn-primary">Shop Now</a>
+        </div>
+      </div>
+
+      <div class="mySlides fade">
+        <img src="https://placehold.co/1200x450/111/FFF?text=Slide+3" class="slide-img">
+        <div class="hero-text">
+          <h1>CAR CARE</h1>
+          <p>Get your shine on.</p>
+          <a href="#" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <div class="dots-container">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
     </div>
   </section>
-
   <section class="featured-products">
     <h2>New Arrivals</h2>
     <div class="product-grid">
@@ -72,5 +104,6 @@
     </div>
   </footer>
 
+  <script src="script-misturado.js"></script>
 </body>
 </html>
